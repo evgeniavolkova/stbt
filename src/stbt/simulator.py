@@ -450,7 +450,7 @@ class Strategy(object):
             {'delay': 2, 'commissions_const': 0.001},
         ]
 
-        self.tests_figure = plt.figure()
+        self.tests_figure = plt.figure(figsize=(20,5))
         axis = plt.subplot2grid((12, 1), (0, 0), rowspan=12, colspan=1)
 
         test_number = 0
@@ -463,6 +463,7 @@ class Strategy(object):
         axis.xaxis.set_major_locator(mticker.MaxNLocator(5))
         plt.title('Tests_pnls')
         plt.legend()
+        plt.grid()
 
         return list_of_res_dicts
 
